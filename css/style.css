@@ -25,7 +25,10 @@
 	FONTS
 */
 
-@import url("https://fonts.googleapis.com/css?family=Kaushan+Script|Oswald:300,400,700");
+/* @import url("https://fonts.googleapis.com/css?family=Kaushan+Script|Oswald:300,400,700"); */
+@import url("https://fonts.googleapis.com/css?family=Raleway-Bold&subset=latin,cyrillic");
+
+/* raleway-600 - latin */
 
 /*
 	CSS RESET
@@ -643,13 +646,15 @@ body {
   font-size: 18px;
   font-weight: 400;
   font-family: "Oswald", sans-serif;
-  background-color: #000;
+  background-color: #141515;
   line-height: 1;
 }
 
 p {
   line-height: 1.45em;
   font-size: 22px;
+  font-family: "Arial", cursive;
+  font-weight: 600;
 }
 
 h1,
@@ -661,6 +666,8 @@ h6 {
   font-size: 38px;
   margin-bottom: 20px;
   text-transform: uppercase;
+  font-family: "Arial", cursive;
+  font-weight: 700;
 }
 
 a,
@@ -669,6 +676,8 @@ a:visited,
 a:hover,
 a:active {
   color: #fff;
+  font-family: "Arial", cursive;
+  font-weight: 600;
 }
 
 ::-webkit-input-placeholder {
@@ -763,8 +772,8 @@ a:active {
   width: 100%;
   height: 100%;
   margin: 0 auto;
-  max-width: 1920px;
-  background-color: #000;
+  /* max-width: 1920px; */
+  background-color: #141515;
   /* background-image:url('../images/bg.jpg'); */
   background-position: top center;
   background-repeat: no-repeat;
@@ -815,18 +824,62 @@ a:active {
 
 @media screen and (min-width: 768px) {
   .glass-ball {
-    left: 0;
-    top: -15%;
     width: 100%;
-    height: 130%;
-    z-index: 90;
+    height: 100%;
+    z-index: 0;
     position: absolute;
-    background-image: url("../images/glass-ball.png");
-    background-position: center center;
+    background-image: url("../images/rightball.png");
+    background-position: center right;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 50%;
+    /* background-size: contain; */
   }
 }
+
+@media screen and (min-width: 768px) {
+  .left-ball {
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    position: absolute;
+    background-image: url("../images/leftball.png");
+    background-position: center left;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    /* background-size: contain; */
+  }
+}
+@media only screen and (min-width: 768px) {
+  .kblogo {
+    width: 100%;
+    height: 100%;
+    left: 22% !important;
+    top: 50px !important;
+    z-index: 0;
+    position: absolute;
+    background-image: url("../images/kblogo.png");
+    /* background-position: center left; */
+    background-repeat: no-repeat;
+    background-size: 10% !important;
+    /* background-size: contain; */
+  }
+}
+
+.kblogo {
+  width: 100%;
+  height: 100%;
+  left: 10%;
+  top: 50px;
+  z-index: 0;
+  position: absolute;
+  background-image: url("../images/kblogo.png");
+  /* background-position: center left; */
+  background-repeat: no-repeat;
+  background-size: 40%;
+  /* background-size: contain; */
+}
+
+
 
 /* PAGE CONTENT */
 
@@ -845,25 +898,61 @@ a:active {
 .snow-text {
   padding: 0;
   color: #f2f4f8;
-  font-size: 8vw;
+  font-size: 7vw;
   margin-left: -1vw;
   position: relative;
-  margin: 5vh 0 12vh 0;
+  margin: 5vh 0 0 0;
   text-transform: none;
   display: inline-block;
-  font-family: "Kaushan Script", cursive;
+  font-family: "Raleway-Bold", cursive;
   text-shadow: 0px 0px 20px #000;
 }
 
+.snow-text1 {
+  padding: 0;
+  color: #ff8503;
+  font-size: 5vw;
+  margin-left: -1vw;
+  position: relative;
+  margin: 1vh 0 3vh 0;
+  text-transform: none;
+  display: inline-block;
+  font-family: "Raleway-Bold", cursive;
+  text-shadow: 0px 0px 20px #000;
+}
+
+.snow-text2 {
+  padding: 0;
+  color: #f2f4f8;
+  font-size: 5vw;
+  margin-left: -1vw;
+  position: relative;
+  margin: 0vh 0 6vh 0;
+  text-transform: none;
+  display: inline-block;
+  font-family: "Raleway-Bold", cursive;
+  text-shadow: 0px 0px 20px #000;
+}
+
+
 @media screen and (orientation: portrait) {
   .snow-text {
-    font-size: 15vw;
+    font-size: 13vw;
+  }
+  .snow-text1 {
+    font-size: 13vw;
   }
 }
 
 @media screen and (orientation: landscape) {
   .snow-text {
-    font-size: 16vh;
+    font-size: 13vh;
+  }
+  .snow-text1 {
+    font-size: 10vh;
+  }
+  .snow-text2 {
+    font-size: 4vh;
   }
 }
 
@@ -902,7 +991,7 @@ a:active {
   right: -63px;
   content: "";
   display: block;
-  width: 115px;
+  width: 100px;
   height: 108px;
   position: absolute;
   background-image: url("../images/bell.png");
@@ -1013,6 +1102,10 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
+}
+
+th{
+  color: #000;
 }
 
 th,

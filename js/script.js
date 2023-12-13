@@ -27,10 +27,10 @@ $(function()
 			{
 				$(this.el).html
 				(
-					"<div class=\"countdown-box\"><h2 class=\"countdown-number\">" + data.days + "</h2>" + " <h4 class=\"countdown-title\">өдөр</h4></div>" +
-					"<div class=\"countdown-box\"><h2 class=\"countdown-number\">" + data.hours + "</h2>" + " <h4 class=\"countdown-title\">цаг</h4></div>" +
-					"<div class=\"countdown-box\"><h2 class=\"countdown-number\">" + this.leadingZeros(data.min, 2) + "</h2>" + " <h4 class=\"countdown-title\">минут</h4></div>" +
-					"<div class=\"countdown-box\"><h2 class=\"countdown-number\">" + this.leadingZeros(data.sec, 2) + "</h2>" + " <h4 class=\"countdown-title\">секунд</h4></div>"
+					"<div class=\"countdown-box\"><h2 class=\"countdown-number\">" + data.days + "</h2>" + " <h4 class=\"countdown-title\">days</h4></div>" +
+					"<div class=\"countdown-box\"><h2 class=\"countdown-number\">" + data.hours + "</h2>" + " <h4 class=\"countdown-title\">HOURS</h4></div>" +
+					"<div class=\"countdown-box\"><h2 class=\"countdown-number\">" + this.leadingZeros(data.min, 2) + "</h2>" + " <h4 class=\"countdown-title\">minutes</h4></div>" +
+					"<div class=\"countdown-box\"><h2 class=\"countdown-number\">" + this.leadingZeros(data.sec, 2) + "</h2>" + " <h4 class=\"countdown-title\">seconds</h4></div>"
 				);
 			}
 		});
