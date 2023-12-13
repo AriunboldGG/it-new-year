@@ -26,7 +26,12 @@
 */
 
 /* @import url("https://fonts.googleapis.com/css?family=Kaushan+Script|Oswald:300,400,700"); */
-@import url("https://fonts.googleapis.com/css?family=Raleway");
+/* @import url("https://fonts.googleapis.com/css?family=Raleway"); */
+
+@font-face {
+  font-family: Raleway-Bold;
+  src: url(../fonts/Raleway-Bold.ttf) format("truetype");
+}
 
 /*
 	CSS RESET
@@ -655,6 +660,10 @@ p {
   font-weight: 600;
 }
 
+h3,h2{
+  font-weight: 700 !important;
+}
+
 h1,
 h2,
 h3,
@@ -665,7 +674,7 @@ h6 {
   margin-bottom: 20px;
   text-transform: uppercase;
   font-family: "Arial", cursive;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 a,
