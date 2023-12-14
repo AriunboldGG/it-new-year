@@ -5,6 +5,7 @@
   <!-- META TAGS -->
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
   <!-- STYLES -->
   <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
   <link href="css/fullpage.css" rel="stylesheet" type="text/css" />
@@ -17,7 +18,7 @@
 <body>
   <!-- AUDIO PLAYER -->
   <audio class="audio-player" loop="">
-    <source src="media/song2.mp3" type="audio/mpeg" />
+    <source src="media/song3.mp3" type="audio/mpeg" />
   </audio>
   <!-- BACKGROUND CONTAINER -->
   <div class="bg-container snowy">
@@ -48,8 +49,11 @@
           <div class="container">
             <!-- INFO TEXT -->
             <div class="shadow-box">
-              <h2>МТ газруудын нэгдсэн шинэ жил - 2024</h2>
+              <h3>МТ газруудын нэгдсэн шинэ жил - 2024</h3>
               <p>Та бүхнийг хүрэлцэн ирэхийг урьж байна.</p>
+              <br>
+              <p>Нийтээрээ 15:30 -д Khan Tower - с автобусаар хөдлөнө</p>
+
             </div>
           </div>
         </div>
@@ -58,9 +62,8 @@
             <!-- INFO TEXT -->
             <div class="shadow-box">
               <h2>Dress code:</h2>
-              <p>META, CYBER CHIC</p>
+              <span class="dress-code">META, CYBER CHIC</span>
               <br>
-              <p>Нийтээрээ 15:30 -д Khan Tower -с автобусаар хөдлөнө</p>
             </div>
           </div>
         </div>
@@ -112,10 +115,6 @@
                   <td>Everyone</td>
                 </tr>
                 <tr>
-                  <td>Comedy</td>
-                  <td>IT Comedians</td>
-                </tr>
-                <tr>
                   <td>Хөгжөөнт тоглоом - 1</td>
                   <td>Everyone</td>
                 </tr>
@@ -152,7 +151,36 @@
                   target="_blank"> харах</a>
               </div>
               <br>
-              <div style="width: 100%"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3790.115188528824!2d106.8092402597717!3d47.844754910414025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5d96956764d32609%3A0xbb1597ec7bcb892d!2z0J3Rg9C80YIg0LPSr9GA0Y3QvQ!5e1!3m2!1sen!2smn!4v1702481513096!5m2!1sen!2smn" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+              <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                  <img src="./images/img-1.png" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                  <img src="./images/2.jpg" style="width:100%">
+                </div>
+                
+                <div class="mySlides fade">
+                  <img src="./images/img-2.png" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                  <img src="./images/5.jpg" style="width:100%">
+                </div>
+                
+                <div>
+                  <a class="prev" onclick="plusSlides(-1)">❮</a>
+                  <a class="next" onclick="plusSlides(1)">❯</a>
+                </div>
+                
+                <div class="slider-bottom" style="text-align:center">
+                  <span class="dot" onclick="currentSlide(1)"></span> 
+                  <span class="dot" onclick="currentSlide(2)"></span> 
+                  <span class="dot" onclick="currentSlide(3)"></span> 
+                  <span class="dot" onclick="currentSlide(4)"></span> 
+                </div>
+              </div>
+                
+                
             </div>
           </div>
         </div>
@@ -168,7 +196,34 @@
   <script type="text/javascript" src="js/snowy.js"></script>
   <script type="text/javascript" src="js/script.js"></script>
   <script type="text/javascript" src="js/custom.js"></script>
- 
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
 </body>
 
 </html>
