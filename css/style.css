@@ -28,6 +28,7 @@
 /* @import url("https://fonts.googleapis.com/css?family=Kaushan+Script|Oswald:300,400,700"); */
 /* @import url("https://fonts.googleapis.com/css?family=Raleway"); */
 
+@import url("https://fonts.googleapis.com/css?family=Raleway");
 @font-face {
   font-family: Raleway-Bold;
   src: url(../fonts/Raleway-Bold.ttf) format("truetype");
@@ -1615,6 +1616,7 @@ th {
 }
 .mySlides img {
   height: 500px;
+  object-fit: cover;
 }
 
 /* Add a pointer when hovering over the thumbnail images */
